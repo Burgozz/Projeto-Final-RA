@@ -10,18 +10,18 @@
   <a-scene embedded arjs>
 
     <a-assets>
-      <!-- SUA IMAGEM DO CARDÁPIO QUE VAI VIR DO CANVA -->
-      <img id="cardapio" src="./cardapio.png">
+      <!-- SUA IMAGEM DO CARDÁPIO -->
+      <img id="cardapio" src="./imagens/cardapio.png">
     </a-assets>
 
     <!-- MARCADOR KANJI -->
-    <a-marker preset="kanji">
+    <a-marker preset="./marcador_canji.patt" id="kanjiMarker">
 
       <!-- FOLHA DO CARDÁPIO NA MESA -->
       <a-plane 
         src="#cardapio"
         width="1.8"
-        height="2.5"
+        height="3"
         rotation="-90 0 0"
         position="0 0 0">
       </a-plane>
