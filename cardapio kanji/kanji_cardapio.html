@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.min.js"></script>
 </head>
@@ -9,19 +9,19 @@
 <body style="margin:0; overflow:hidden;">
   <a-scene embedded arjs>
 
+    <!-- IMPORTAR IMAGEM DO CARDÁPIO -->
     <a-assets>
-      <!-- SUA IMAGEM DO CARDÁPIO -->
       <img id="cardapio" src="./imagens/cardapio.png">
     </a-assets>
 
-    <!-- MARCADOR KANJI -->
-    <a-marker preset="./marcador_canji.patt" id="kanjiMarker">
+    <!-- USAR O SEU MARCADOR PERSONALIZADO -->
+    <a-marker type="pattern" url="./marcador_cardapio/marker.patt" id="cardapioMarker">
 
-      <!-- FOLHA DO CARDÁPIO NA MESA -->
+      <!-- FOLHA DE CARDÁPIO NA MESA -->
       <a-plane 
         src="#cardapio"
         width="1.8"
-        height="3"
+        height="2.5"
         rotation="-90 0 0"
         position="0 0 0">
       </a-plane>
